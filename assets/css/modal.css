@@ -1,0 +1,127 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.modalWindow {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;}
+
+.modal{
+    width: 60%;
+    min-width: 450px;
+    min-width: 200px;
+    background-color: #ffffff9c;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    
+}
+
+.close{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #bf3029;
+    color:rgb(224, 216, 216);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modalWindow.open{
+    display: flex;
+
+}
+
+
+
+
+
+.modalName{
+    font-size: 1.8rem;
+    position: relative;
+    top: -1.5rem;
+    left: -1rem;;
+}
+.modalName::first-letter{
+    text-transform: uppercase;
+}
+.modalNumber{
+    font-size: 0.8rem;
+    color: rgba(70, 70, 70, 0.836);
+    position: relative;
+    top: -3rem;
+    left: 11.5rem;
+}
+.modalType{
+    list-style-type: none;
+    position: relative;
+    top: -2rem;
+    left: -3.5rem;
+    padding: 0.3rem
+
+}
+.modalType::first-letter{
+    text-transform: uppercase;
+}
+
+.modalImage{
+    max-width: 100%;
+    height: 11rem;
+    position: relative;
+    left: 8rem;
+    top: -5rem;
+}
+
+
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+    top: -50px;
+
+}
+
+td {
+    padding: 8px;
+    border: none;
+}
+
+.modalTitleDetail {
+    font-weight: bold;
+    color: rgba(70, 70, 70, 0.836)
+}
+
+
+.modalValueDetail {
+    font-weight: normal;
+    color: black;
+}
+    
+@keyframes openModal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.open .modal {
+    animation: openModal 0.5s;
+}
